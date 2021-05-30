@@ -6,16 +6,6 @@ import numpy.linalg as lg
 data = pd.read_csv('F:\\解超F\\数据.csv')
 print(data)
 
-
-# q = data['热流'].values
-# print(data.columns)
-
-
-# ti = data['内表面温度'].values
-#
-# te = data['外表面温度'].values
-
-
 class Dynamic(object):
     def __init__(self, heat_flow, inside, outside, number_equations=30, det_t=0.5, m=3, r=5):
         self.M = number_equations  # 方程的个数
@@ -115,13 +105,6 @@ class Dynamic(object):
         return sum_s_2, 1 / zz[0]
 
 # r = Dynamic(q[0:72], ti[0:72], te[0:72])
-# r = Dynamic(q[0:42], ti[0:42], te[0:42])
-# r = Dynamic(q[42:72], ti[42:72], te[42:72])
-# r = Dynamic(q[42:90], ti[42:90], te[42:90])
-# r = Dynamic(q[91:139], ti[91:139], te[91:139])
-# r = Dynamic(q[140:188], ti[140:188], te[140:188])
-
-# r = Dynamic(q[140:188], ti[140:188], te[140:188])
 # r = Dynamic(q[44:188], ti[44:188], te[44:188])
 # print(r.I)
 # import matplotlib.pyplot as plt
